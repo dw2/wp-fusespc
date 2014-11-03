@@ -1314,5 +1314,9 @@ footer .legal a:focus {
   }
   footer .legal {
     padding-top: 180px;
+    text-transform: none;
+  }
+  footer .legal a {
+    margin: 0 0 0 0.5em;
   }
 }
