@@ -2,6 +2,8 @@
 /* Template Name: Membership Page */
 get_header();
 the_post();
+
+$checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
 ?>
 
 <section>
@@ -24,7 +26,8 @@ the_post();
           <th>Seating</th>
           <th>Events</th>
           <th>Conference<br>Room</th>
-          <th class="alignr">Monthly<br>Cost</th>
+          <th>Monthly<br>Cost</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -34,7 +37,12 @@ the_post();
           <td><mark class="no">No</mark></td>
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="no">No</mark></td>
-          <th class="alignr">$30</th>
+          <td><strong>$30</strong></td>
+          <td class="nopad">
+            <a class="btn small"
+              href="<?= $checkout_url ?>?level=<?= BASIC_MEMBERSHIP_LEVEL ?>">
+              Sign up</a>
+          </td>
         </tr>
         <tr class="even">
           <th class="alignl">Hot Desk 1</th>
@@ -42,7 +50,12 @@ the_post();
           <td>Open</td>
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="yes">Yes</mark></td>
-          <th class="alignr">$75</th>
+          <td><strong>$75</strong></td>
+          <td class="nopad">
+            <a class="btn small"
+              href="<?= $checkout_url ?>?level=<?= HOT_DESK_1_LEVEL ?>">
+              Sign up</a>
+          </td>
         </tr>
         <tr class="odd">
           <th class="alignl">Hot Desk 2</th>
@@ -50,7 +63,12 @@ the_post();
           <td>Open</td>
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="yes">Yes</mark></td>
-          <th class="alignr">$125</th>
+          <td><strong>$125</strong></td>
+          <td class="nopad">
+            <a class="btn small"
+              href="<?= $checkout_url ?>?level=<?= HOT_DESK_2_LEVEL ?>">
+              Sign up</a>
+          </td>
         </tr>
         <tr class="even">
           <th class="alignl">Fixed Desk</th>
@@ -58,7 +76,12 @@ the_post();
           <td>Reserved</td>
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="yes">Yes</mark></td>
-          <th class="alignr">$225</th>
+          <td><strong>$225</strong></td>
+          <td class="nopad">
+            <a class="btn small"
+              href="<?= $checkout_url ?>?level=<?= FIXED_DESK_LEVEL ?>">
+              Sign up</a>
+          </td>
         </tr>
         <tr class="odd">
           <th class="alignl">Offices</th>
@@ -66,10 +89,11 @@ the_post();
           <td>Private</td>
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="yes">Yes</mark></td>
-          <th class="alignr">$400+</th>
+          <td><strong>$400</strong></td>
+          <td class="nopad">
         </tr>
         <tr class="odd">
-          <td class="alignl" colspan="6">
+          <td class="alignl" colspan="7">
             <p class="notes">
               Office prices based on square footage. Fees for additional occupant(s) applies.
             </p>

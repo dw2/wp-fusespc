@@ -6,12 +6,21 @@ register_nav_menu('Header', 'Top level links, displayed in the header.');
 add_theme_support('post-thumbnails');
 
 define('TEMPLATE_URL', get_bloginfo('template_url'));
+
 define('POLICIES_PAGE_ID', 11);
 define('PRIVACY_POLICY_PAGE_ID', 9);
 define('TERMS_OF_USE_PAGE_ID', 14);
 define('STORIES_PAGE_ID', 33);
+define('MEMBERSHIP_PAGE_ID', 123);
+define('MEMBERSHIP_CHECKOUT_PAGE_ID', 126);
 
-function display_storyboxes($posts) {
+define('BASIC_MEMBERSHIP_LEVEL', 1);
+define('HOT_DESK_1_LEVEL', 2);
+define('HOT_DESK_2_LEVEL', 3);
+define('FIXED_DESK_LEVEL', 4);
+
+function display_storyboxes($posts)
+{
   foreach($posts as $index=>$story) {
     $number = $index + 1;
     $title = $story->post_title;
@@ -22,4 +31,12 @@ function display_storyboxes($posts) {
   
     include 'partials/storybox.php';
   }
+}
+
+# Remove PMPro CSS
+add_action('wp_print_styles','dequeue_pmpro_css', 10);
+function dequeue_pmpro_css()
+{
+  wp_dequeue_style('pmpro_frontend');
+  wp_dequeue_style('pmpro_print');
 }

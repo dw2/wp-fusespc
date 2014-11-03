@@ -65,12 +65,24 @@ input[type="submit"]
         margin-left: .5em
 
 section form
+    label
+        line-height: 1.25em
     
     input[type="text"],
     input[type="password"],
     input[type="email"],
     input[type="url"],
     textarea
+        background: #eee
+        box_shadow(0 1px 1px rgba(#0e4e5c,.5))
+        box_sizing(border-box)
+        display: inline-block
+        font-size: 1.2em
+        height: 2.25em
+        line-height: 1.25em
+        padding: .5em 1em
+    
+    select
         background: #eee
         box_shadow(0 1px 1px rgba(#0e4e5c,.5))
         box_sizing(border-box)
