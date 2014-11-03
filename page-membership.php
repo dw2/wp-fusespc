@@ -38,7 +38,7 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="no">No</mark></td>
           <td><strong>$30</strong></td>
-          <td class="nopad">
+          <td class="nopad alignr">
             <a class="btn small"
               href="<?= $checkout_url ?>?level=<?= BASIC_MEMBERSHIP_LEVEL ?>">
               Sign up</a>
@@ -51,7 +51,7 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="yes">Yes</mark></td>
           <td><strong>$75</strong></td>
-          <td class="nopad">
+          <td class="nopad alignr">
             <a class="btn small"
               href="<?= $checkout_url ?>?level=<?= HOT_DESK_1_LEVEL ?>">
               Sign up</a>
@@ -64,7 +64,7 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="yes">Yes</mark></td>
           <td><strong>$125</strong></td>
-          <td class="nopad">
+          <td class="nopad alignr">
             <a class="btn small"
               href="<?= $checkout_url ?>?level=<?= HOT_DESK_2_LEVEL ?>">
               Sign up</a>
@@ -77,7 +77,7 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="yes">Yes</mark></td>
           <td><strong>$225</strong></td>
-          <td class="nopad">
+          <td class="nopad alignr">
             <a class="btn small"
               href="<?= $checkout_url ?>?level=<?= FIXED_DESK_LEVEL ?>">
               Sign up</a>
@@ -90,7 +90,11 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
           <td><mark class="yes">Yes</mark></td>
           <td><mark class="yes">Yes</mark></td>
           <td><strong>$400</strong></td>
-          <td class="nopad">
+          <td class="nopad alignr">
+            <a class="btn small secondary"
+              href="<?= get_permalink(MEMBERSHIP_LEVELS_PAGE_ID) ?>">
+              Availability</a>
+          </td>
         </tr>
         <tr class="odd">
           <td class="alignl" colspan="7">
@@ -108,6 +112,11 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
           <td class="alignc">
             <h3>Basic</h3><mark class="price">$30/mo</mark>
             <p class="list"><span>Access to events</span></p>
+            <p>
+              <a class="btn small"
+                href="<?= $checkout_url ?>?level=<?= BASIC_MEMBERSHIP_LEVEL ?>">
+                Sign up</a>
+            </p>
           </td>
         </tr>
         <tr class="even">
@@ -115,6 +124,11 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
             <h3>Hot Desk 1</h3><mark class="price">$75/mo</mark>
             <p class="list">
               Open Seating, 10 coworking days, acceess to events and conference rooms.
+            </p>
+            <p>
+              <a class="btn small"
+                href="<?= $checkout_url ?>?level=<?= HOT_DESK_1_LEVEL ?>">
+                Sign up</a>
             </p>
           </td>
         </tr>
@@ -124,6 +138,11 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
             <p class="list">
               Open Seating, unlimited coworking days, acceess to events and conference rooms.
             </p>
+            <p>
+              <a class="btn small"
+                href="<?= $checkout_url ?>?level=<?= HOT_DESK_2_LEVEL ?>">
+                Sign up</a>
+            </p>
           </td>
         </tr>
         <tr class="even">
@@ -131,6 +150,11 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
             <h3>Fixed Desk</h3><mark class="price">$225/mo</mark>
             <p class="list">
               Reserved seating, unlimited coworking days, lockable desk, acceess to events and conference rooms.
+            </p>
+            <p>
+              <a class="btn small"
+                href="<?= $checkout_url ?>?level=<?= FIXED_DESK_LEVEL ?>">
+                Sign up</a>
             </p>
           </td>
         </tr>
@@ -142,6 +166,11 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
             </p>
             <p class="notes">
               Prices based on square footage. Fees for additional occupants applies.
+            </p>
+            <p>
+              <a class="btn small secondary"
+                href="<?= get_permalink(MEMBERSHIP_LEVELS_PAGE_ID) ?>">
+                Availability</a>
             </p>
           </td>
         </tr>
