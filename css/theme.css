@@ -1292,6 +1292,9 @@ section.map iframe {
     height: 280px;
   }
 }
+.pmpro_thead-msg {
+  display: block;
+}
 #pmpro_pricing_fields {
   background: #e4f5f8;
   text-align: left;
@@ -1299,13 +1302,24 @@ section.map iframe {
 #pmpro_pricing_fields .pmpro_thead-msg {
   float: right;
 }
+#pmpro_user_fields,
+#pmpro_tos_fields,
 #pmpro_payment_information_fields {
   border: 2px solid #e4f5f8;
   text-align: left;
 }
+#pmpro_user_fields label,
 #pmpro_payment_information_fields label {
   display: block;
   margin: 1.5em 0 0.5em;
+}
+#pmpro_tos_fields label {
+  display: inline-block;
+}
+#pmpro_license {
+  border-bottom: 2px solid #deeef1;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 footer {
   font-size: 0.8em;

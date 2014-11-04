@@ -21,7 +21,7 @@ define('HOT_DESK_1_LEVEL', 2);
 define('HOT_DESK_2_LEVEL', 3);
 define('FIXED_DESK_LEVEL', 4);
 
-function display_storyboxes($posts)
+function display_storyboxes ($posts)
 {
   foreach($posts as $index=>$story) {
     $number = $index + 1;
@@ -36,9 +36,9 @@ function display_storyboxes($posts)
 }
 
 # Remove PMPro CSS
-add_action('wp_print_styles','dequeue_pmpro_css', 10);
-function dequeue_pmpro_css()
+function dequeue_pmpro_css ()
 {
   wp_dequeue_style('pmpro_frontend');
   wp_dequeue_style('pmpro_print');
 }
+add_action('wp_print_styles','dequeue_pmpro_css', 10);
