@@ -92,7 +92,7 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
           <td><strong>$400</strong></td>
           <td class="nopad alignr">
             <a class="btn small secondary"
-              href="<?= get_permalink(MEMBERSHIP_LEVELS_PAGE_ID) ?>">
+              href="<?= get_permalink(MEMBERSHIP_AVAILABILITY_PAGE_ID) ?>">
               Availability</a>
           </td>
         </tr>
@@ -169,7 +169,7 @@ $checkout_url = get_permalink(MEMBERSHIP_CHECKOUT_PAGE_ID);
             </p>
             <p>
               <a class="btn small secondary"
-                href="<?= get_permalink(MEMBERSHIP_LEVELS_PAGE_ID) ?>">
+                href="<?= get_permalink(MEMBERSHIP_AVAILABILITY_PAGE_ID) ?>">
                 Availability</a>
             </p>
           </td>
