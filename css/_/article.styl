@@ -93,11 +93,9 @@ section
     .twocol,
     .threecol,
     .fourcol
-        ~ .twocol,
-        ~ .threecol,
-        ~ .fourcol
-            border-top: .15em solid #eee
         &.logos
+            ~ .logos
+                border-top: .15em solid #eee
             blockquote
                 background: transparent !important
                 text-align: center

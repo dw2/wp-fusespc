@@ -23,21 +23,61 @@ header
         z-index: 1
         a
             text-transform: uppercase
+        > ul
+            display: inline
+        > ul > li
+            display: inline-block
+            position: relative
+        > ul > li > a
+            padding: 0 .75em
+
 
 @media screen and (min-width: 840px)
     header nav
         line-height: 60px
         right: 5px
         top: 30px
-        a
+        > ul > li > a
             color: #1bc0e3
             display: inline-block
             font-weight: 600
-            padding: 0 15px
             vertical-align: center
             &:hover,
             &:focus
-                color: #0093b2
+                color: #135d6d
+        ul ul
+            background: #135d6d
+            display: block
+            left: -2em
+            position: absolute
+            right: -2em
+            top: -999em
+            &:before
+                border: .4em solid transparent
+                border-bottom-color: #135d6d
+                bottom: 100%
+                content: ''
+                left: 50%
+                margin-left: -.2em
+                position: absolute
+            li
+                line-height: 1em
+            a
+                color: #fff
+                display: block
+                line-height: 1em
+                padding: 0 1em
+                transition(padding .2s linear)
+                &:hover
+                    background: #0a404c
+                    color: #fff
+        li:hover
+            > a
+                color: #135d6d
+            ul
+                top: 100%
+                a
+                    padding: .75em 1em
 
 @media screen and (max-width: 839px)
     header nav
@@ -68,32 +108,36 @@ header
             right: 90px
             text-transform: uppercase
             top: 0
+        li
+            display: block !important
         a
             background: #0e4e5c
             border-bottom: 1px solid rgba(#000,.2)
             color: #fff
-            padding: 0 20px
+            display: none
+            padding: .75em 1em !important
             position: absolute
             transition(padding .2s linear)
             top: -999em
             &:hover,
             &:focus
-                color: #FFE35F
+                background: #0a404c
+                color: #fff
     body.menuOpen
         header
             &:after
-                background: #303f42
-                background: rgba(#303f42,.7)
+                background: #135d6d
+                background: rgba(#042229,.7)
                 bottom: 0
                 content: ''
                 left: 0
                 position: fixed
                 right: 0
-                top: 120px
-            nav a
-                display: block
-                padding: 20px
-                position: static
+                top: 120px  
+            nav > ul > li > a,
+            nav ul ul a
+                display: block !important
+                position: static !important
         article,
         footer
             filter(blur(2px))

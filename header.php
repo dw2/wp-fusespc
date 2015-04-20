@@ -39,13 +39,15 @@
         <img src='<?= TEMPLATE_URL ?>/images/fuse-branding.png' alt='Fuse | Coworking, Tri-Cities, WA'/>
       </a>
       <nav>
-        <?
-          echo strip_tags(wp_nav_menu(array(
-            'theme_location' => 'Header',
-            'items_wrap' => '%3$s',
-            'echo' => false
-          )), '<a>');
-        ?>
+        <ul>
+          <?
+            echo strip_tags(wp_nav_menu(array(
+              'theme_location' => 'Header',
+              'items_wrap' => '%3$s',
+              'echo' => false
+            )), '<ul><li><a>');
+          ?>
+        </ul>
       </nav>
     </div>
   </header>

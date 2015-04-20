@@ -519,22 +519,74 @@ header nav {
 header nav a {
   text-transform: uppercase;
 }
+header nav > ul {
+  display: inline;
+}
+header nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+header nav > ul > li > a {
+  padding: 0 0.75em;
+}
 @media screen and (min-width: 840px) {
   header nav {
     line-height: 60px;
     right: 5px;
     top: 30px;
   }
-  header nav a {
+  header nav > ul > li > a {
     color: #1bc0e3;
     display: inline-block;
     font-weight: 600;
-    padding: 0 15px;
     vertical-align: center;
   }
-  header nav a:hover,
-  header nav a:focus {
-    color: #0093b2;
+  header nav > ul > li > a:hover,
+  header nav > ul > li > a:focus {
+    color: #135d6d;
+  }
+  header nav ul ul {
+    background: #135d6d;
+    display: block;
+    left: -2em;
+    position: absolute;
+    right: -2em;
+    top: -999em;
+  }
+  header nav ul ul:before {
+    border: 0.4em solid transparent;
+    border-bottom-color: #135d6d;
+    bottom: 100%;
+    content: '';
+    left: 50%;
+    margin-left: -0.2em;
+    position: absolute;
+  }
+  header nav ul ul li {
+    line-height: 1em;
+  }
+  header nav ul ul a {
+    color: #fff;
+    display: block;
+    line-height: 1em;
+    padding: 0 1em;
+    -moz-transition: padding 0.2s linear;
+    -o-transition: padding 0.2s linear;
+    -webkit-transition: padding 0.2s linear;
+    transition: padding 0.2s linear;
+  }
+  header nav ul ul a:hover {
+    background: #0a404c;
+    color: #fff;
+  }
+  header nav li:hover > a {
+    color: #135d6d;
+  }
+  header nav li:hover ul {
+    top: 100%;
+  }
+  header nav li:hover ul a {
+    padding: 0.75em 1em;
   }
 }
 @media screen and (max-width: 839px) {
@@ -569,11 +621,15 @@ header nav a {
     text-transform: uppercase;
     top: 0;
   }
+  header nav li {
+    display: block !important;
+  }
   header nav a {
     background: #0e4e5c;
     border-bottom: 1px solid rgba(0,0,0,0.2);
     color: #fff;
-    padding: 0 20px;
+    display: none;
+    padding: 0.75em 1em !important;
     position: absolute;
     -moz-transition: padding 0.2s linear;
     -o-transition: padding 0.2s linear;
@@ -583,11 +639,12 @@ header nav a {
   }
   header nav a:hover,
   header nav a:focus {
-    color: #ffe35f;
+    background: #0a404c;
+    color: #fff;
   }
   body.menuOpen header:after {
-    background: #303f42;
-    background: rgba(48,63,66,0.7);
+    background: #135d6d;
+    background: rgba(4,34,41,0.7);
     bottom: 0;
     content: '';
     left: 0;
@@ -595,10 +652,10 @@ header nav a {
     right: 0;
     top: 120px;
   }
-  body.menuOpen header nav a {
-    display: block;
-    padding: 20px;
-    position: static;
+  body.menuOpen header nav > ul > li > a,
+  body.menuOpen header nav ul ul a {
+    display: block !important;
+    position: static !important;
   }
   body.menuOpen article,
   body.menuOpen footer {
@@ -886,15 +943,9 @@ section .input ~.block,
 section .block ~.block {
   margin-top: 1.5em;
 }
-section .twocol ~ .twocol,
-section .threecol ~ .twocol,
-section .fourcol ~ .twocol,
-section .twocol ~ .threecol,
-section .threecol ~ .threecol,
-section .fourcol ~ .threecol,
-section .twocol ~ .fourcol,
-section .threecol ~ .fourcol,
-section .fourcol ~ .fourcol {
+section .twocol.logos ~ .logos,
+section .threecol.logos ~ .logos,
+section .fourcol.logos ~ .logos {
   border-top: 0.15em solid #eee;
 }
 section .twocol.logos blockquote,
