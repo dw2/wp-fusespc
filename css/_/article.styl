@@ -38,7 +38,7 @@ section
 
     hr
         margin: 40px 0
-        border-top: 1px double #eee
+        border-top: .15em solid #eee
 
     p
         line-height: 1.4em
@@ -89,6 +89,24 @@ section
     h1, h2, h3, h4, p, ul, ol, dl, blockquote, form, table, .input, .block
         ~h1, ~h2, ~h3, ~h4, ~p, ~ul, ~ol, ~dl, ~blockquote, ~form, ~table, ~.block
             margin-top: 1.5em
+
+    .twocol,
+    .threecol,
+    .fourcol
+        ~ .twocol,
+        ~ .threecol,
+        ~ .fourcol
+            border-top: .15em solid #eee
+        &.logos
+            blockquote
+                background: transparent !important
+                text-align: center
+                img
+                    height: auto !important
+                    margin: 0 auto
+                    max-height: 200px
+                    max-width: 200px
+                    width: auto !important
 
 @media screen and (min-width: 1000px)
     .fourcol
