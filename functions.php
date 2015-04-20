@@ -21,6 +21,8 @@ define('HOT_DESK_1_LEVEL', 2);
 define('HOT_DESK_2_LEVEL', 3);
 define('FIXED_DESK_LEVEL', 4);
 
+define('ANNUAL_REPORT_PAGE_ID', 208);
+
 function display_storyboxes ($posts)
 {
   foreach($posts as $index=>$story) {

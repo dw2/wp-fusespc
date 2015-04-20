@@ -322,6 +322,16 @@ section form select {
   line-height: 1.25em;
   padding: 0.5em 1em;
 }
+.input pmpro_required {
+  margin: 0.5em;
+}
+.pmpro_checkout {
+  align: left !important;
+}
+#fullname,
+.pmpro_hidden {
+  display: none !important;
+}
 table {
   margin: 1em auto;
   text-align: center;

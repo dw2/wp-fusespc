@@ -10,6 +10,7 @@
         <a href='<?= get_permalink(PRIVACY_POLICY_PAGE_ID) ?>'>Privacy</a>
         <a href='<?= get_permalink(TERMS_OF_USE_PAGE_ID) ?>'>Terms</a>
         <a href='<?= get_permalink(POLICIES_PAGE_ID) ?>'>Policies</a>
+        <a href='<?= get_permalink(ANNUAL_REPORT_PAGE_ID) ?>'>Annual Report</a>
       </p>
     </div>
   </footer>
