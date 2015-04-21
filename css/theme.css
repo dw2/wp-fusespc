@@ -559,7 +559,7 @@ header nav > ul > li > a {
     bottom: 100%;
     content: '';
     left: 50%;
-    margin-left: -0.2em;
+    margin-left: -0.4em;
     position: absolute;
   }
   header nav ul ul li {
