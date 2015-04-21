@@ -516,9 +516,6 @@ header nav {
   position: absolute;
   z-index: 1;
 }
-header nav a {
-  text-transform: uppercase;
-}
 header nav > ul {
   display: inline;
 }
@@ -528,6 +525,7 @@ header nav > ul > li {
 }
 header nav > ul > li > a {
   padding: 0 0.75em;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 840px) {
   header nav {
@@ -631,6 +629,7 @@ header nav > ul > li > a {
     display: none;
     padding: 0.75em 1em !important;
     position: absolute;
+    text-transform: uppercase;
     -moz-transition: padding 0.2s linear;
     -o-transition: padding 0.2s linear;
     -webkit-transition: padding 0.2s linear;
@@ -657,6 +656,9 @@ header nav > ul > li > a {
     display: block !important;
     position: static !important;
   }
+  body.menuOpen header li.included > a {
+    display: none !important;
+  }
   body.menuOpen article,
   body.menuOpen footer {
     -moz-filter: blur(2px);
@@ -664,6 +666,14 @@ header nav > ul > li > a {
     -o-filter: blur(2px);
     -webkit-filter: blur(2px);
     filter: blur(2px);
+  }
+  body.menuOpen.admin-bar header:after {
+    top: 152px;
+  }
+}
+@media screen and (max-width: 782px) {
+  body.menuOpen.admin-bar header:after {
+    top: 166px;
   }
 }
 @media screen and (max-width: 479px) {
