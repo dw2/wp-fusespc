@@ -20,7 +20,10 @@
     //scripts
     wp_enqueue_script('jquery');
     if(is_singular()) wp_enqueue_script('comment-reply');
-    wp_enqueue_script('theme', TEMPLATE_URL . '/js/theme.js');
+    wp_enqueue_script('froogaloop', TEMPLATE_URL . '/js/froogaloop.min.js',
+        array('jquery'));
+    wp_enqueue_script('theme', TEMPLATE_URL . '/js/theme.js',
+        array('jquery', 'froogaloop'));
 
     //css
     wp_enqueue_style('icons', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');

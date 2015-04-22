@@ -1,0 +1,21 @@
+section.video
+    height: 0
+    overflow: hidden
+    padding: 0 !important
+    position: relative
+
+    iframe
+        height: 100%
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+    
+    img
+        display: block
+        height: auto
+        transition(height .2s linear)
+        width: 100%
+
+    &.open
+        height: auto

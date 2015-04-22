@@ -11,6 +11,7 @@ define('POLICIES_PAGE_ID', 11);
 define('PRIVACY_POLICY_PAGE_ID', 9);
 define('TERMS_OF_USE_PAGE_ID', 14);
 define('STORIES_PAGE_ID', 33);
+define('COWORKING_PAGE_ID', 26);
 
 define('MEMBERSHIP_PAGE_ID', 123);
 define('MEMBERSHIP_CHECKOUT_PAGE_ID', 126);
@@ -44,3 +45,23 @@ function dequeue_pmpro_css ()
   wp_dequeue_style('pmpro_print');
 }
 add_action('wp_print_styles','dequeue_pmpro_css', 10);
+
+
+# Vimeo video player section short code
+function get_vimeo_section ($atts)
+{
+  extract(shortcode_atts(array(
+    'id' => '',
+    'class' => 'open'
+  ), $atts));
+
+  return "
+    <section class=\"video video$id $class\">
+      <iframe src=\"https://player.vimeo.com/video/$id\"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen
+        frameborder=\"0\"></iframe>
+      <img src=\"" . TEMPLATE_URL . "/images/spacer@500x281.png\"
+        alt=\"\"/>
+    </section>";
+}
+add_shortcode('vimeo_section', 'get_vimeo_section');

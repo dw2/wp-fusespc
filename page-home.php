@@ -10,11 +10,15 @@ the_post();
     <h2>Let’s be productive together.</h2>
     <div class="hr"></div>
     <p>
-      <a class="btn" href="/coworking">What is coworking?</a>
+      <a class="btn videoToggle" target="_blank"
+        href="<?= get_permalink(COWORKING_PAGE_ID) ?>">
+        What is coworking?</a>
       <a class="btn" href="/membership">Is this for me?</a>
     </p>
   </div>
 </section>
+
+<?= apply_filters('the_content', '[vimeo_section id="125728204" class=""]') ?>
 
 <section class="stories limited">
   <?
@@ -28,7 +32,8 @@ the_post();
   ?>
   <hr>
   <p>
-    <a class="btn iconr next round secondary small" href="<?= get_permalink(STORIES_PAGE_ID) ?>">
+    <a class="btn iconr next round secondary small"
+      href="<?= get_permalink(STORIES_PAGE_ID) ?>">
       All Stories</a>
   </p>
 </section>

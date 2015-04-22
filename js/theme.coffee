@@ -12,6 +12,16 @@ jQuery(document).ready ($) ->
     $('html').click -> $body.removeClass 'menuOpen'
 
 
+    # Video player toggle on home page
+    $('.videoToggle').click (e) ->
+        $section = $('section.video')
+        $section.addClass 'open'
+        $f($section.find('iframe')[0]).api 'play'
+        $body.scrollTop $section.offset().top
+        e.preventDefault()
+        false
+
+
     # Parallax sections
     $parallaxes = $('section[role=parallax]')
     if $parallaxes.length > 0

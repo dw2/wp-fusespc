@@ -806,6 +806,7 @@ section dl ~h1,
 section blockquote ~h1,
 section form ~h1,
 section table ~h1,
+section section ~h1,
 section .input ~h1,
 section .block ~h1,
 section h1 ~h2,
@@ -819,6 +820,7 @@ section dl ~h2,
 section blockquote ~h2,
 section form ~h2,
 section table ~h2,
+section section ~h2,
 section .input ~h2,
 section .block ~h2,
 section h1 ~h3,
@@ -832,6 +834,7 @@ section dl ~h3,
 section blockquote ~h3,
 section form ~h3,
 section table ~h3,
+section section ~h3,
 section .input ~h3,
 section .block ~h3,
 section h1 ~h4,
@@ -845,6 +848,7 @@ section dl ~h4,
 section blockquote ~h4,
 section form ~h4,
 section table ~h4,
+section section ~h4,
 section .input ~h4,
 section .block ~h4,
 section h1 ~p,
@@ -858,6 +862,7 @@ section dl ~p,
 section blockquote ~p,
 section form ~p,
 section table ~p,
+section section ~p,
 section .input ~p,
 section .block ~p,
 section h1 ~ul,
@@ -871,6 +876,7 @@ section dl ~ul,
 section blockquote ~ul,
 section form ~ul,
 section table ~ul,
+section section ~ul,
 section .input ~ul,
 section .block ~ul,
 section h1 ~ol,
@@ -884,6 +890,7 @@ section dl ~ol,
 section blockquote ~ol,
 section form ~ol,
 section table ~ol,
+section section ~ol,
 section .input ~ol,
 section .block ~ol,
 section h1 ~dl,
@@ -897,6 +904,7 @@ section dl ~dl,
 section blockquote ~dl,
 section form ~dl,
 section table ~dl,
+section section ~dl,
 section .input ~dl,
 section .block ~dl,
 section h1 ~blockquote,
@@ -910,6 +918,7 @@ section dl ~blockquote,
 section blockquote ~blockquote,
 section form ~blockquote,
 section table ~blockquote,
+section section ~blockquote,
 section .input ~blockquote,
 section .block ~blockquote,
 section h1 ~form,
@@ -923,6 +932,7 @@ section dl ~form,
 section blockquote ~form,
 section form ~form,
 section table ~form,
+section section ~form,
 section .input ~form,
 section .block ~form,
 section h1 ~table,
@@ -936,8 +946,23 @@ section dl ~table,
 section blockquote ~table,
 section form ~table,
 section table ~table,
+section section ~table,
 section .input ~table,
 section .block ~table,
+section h1 ~section,
+section h2 ~section,
+section h3 ~section,
+section h4 ~section,
+section p ~section,
+section ul ~section,
+section ol ~section,
+section dl ~section,
+section blockquote ~section,
+section form ~section,
+section table ~section,
+section section ~section,
+section .input ~section,
+section .block ~section,
 section h1 ~.block,
 section h2 ~.block,
 section h3 ~.block,
@@ -949,6 +974,7 @@ section dl ~.block,
 section blockquote ~.block,
 section form ~.block,
 section table ~.block,
+section section ~.block,
 section .input ~.block,
 section .block ~.block {
   margin-top: 1.5em;
@@ -1220,6 +1246,7 @@ section.stories .story cite {
 }
 section.stories .story img {
   display: block;
+  height: auto;
   margin: 0 auto;
   width: 300px;
 }
@@ -1388,6 +1415,31 @@ section.map iframe {
   section.map iframe {
     height: 280px;
   }
+}
+section.video {
+  height: 0;
+  overflow: hidden;
+  padding: 0 !important;
+  position: relative;
+}
+section.video iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+section.video img {
+  display: block;
+  height: auto;
+  -moz-transition: height 0.2s linear;
+  -o-transition: height 0.2s linear;
+  -webkit-transition: height 0.2s linear;
+  transition: height 0.2s linear;
+  width: 100%;
+}
+section.video.open {
+  height: auto;
 }
 .pmpro_thead-msg {
   display: block;

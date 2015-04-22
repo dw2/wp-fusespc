@@ -15,6 +15,15 @@
     $('html').click(function() {
       return $body.removeClass('menuOpen');
     });
+    $('.videoToggle').click(function(e) {
+      var $section;
+      $section = $('section.video');
+      $section.addClass('open');
+      $f($section.find('iframe')[0]).api('play');
+      $body.scrollTop($section.offset().top);
+      e.preventDefault();
+      return false;
+    });
     $parallaxes = $('section[role=parallax]');
     if ($parallaxes.length > 0) {
       if ($.touchEnabled) {
