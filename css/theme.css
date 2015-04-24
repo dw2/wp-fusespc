@@ -787,11 +787,8 @@ section dl dd {
   width: 70%;
 }
 section dl dd > a {
-  display: inline-block;
   font-weight: 600;
-  margin: -1em;
   overflow: hidden;
-  padding: 1em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
