@@ -787,7 +787,7 @@ section dl dd {
   width: 70%;
 }
 section dl dd > a {
-  display: block;
+  display: inline-block;
   font-weight: 600;
   margin: -1em;
   overflow: hidden;
