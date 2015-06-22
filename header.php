@@ -10,7 +10,7 @@
   <meta property="og:url" content="<? the_permalink() ?>"/>
   <meta property="og:title" content="<? the_title() ?>"/>
   <meta property="og:image" content="<?= TEMPLATE_URL ?>/images/fuse-avatar-v3.jpg"/>
-  <meta property="og:description" content="<? the_excerpt() ?>"/>
+  <meta property="og:description" content="<?= strip_tags(get_the_excerpt()) ?>"/>
   <?php
     if (!!$post) {
       $thumb_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
