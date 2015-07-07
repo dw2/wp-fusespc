@@ -473,6 +473,13 @@ table mark.yes:before {
   background: #30c0e0;
   content: '\f00c';
 }
+
+/**** Remove Timely Form Fields ****/
+#ai1ec_cost, #ai1ec_address, #ai1ec-google-map, #ai1ec_ticket_url, #ai1ec_contact_phone, #ai1ec_contact_url, #ai1ec-image, #ai1ec-fileupload-new ai1ec-thumbnail{
+display: none !important;
+}
+/*******/
+
 @media screen and (min-width: 800px) {
   section.pricing table.narrow {
     display: none;
