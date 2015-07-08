@@ -17,7 +17,7 @@ the_post();
       display_storyboxes(get_children(array(
         'post_parent' => STORIES_PAGE_ID,
         'post_type' => 'page',
-        'post_status' => 'published',
+        'post_status' => 'publish',
         'posts_per_page' => -1,
         'order' => 'ASC'
       )));
