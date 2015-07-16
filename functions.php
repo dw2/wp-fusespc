@@ -65,3 +65,23 @@ function get_vimeo_section ($atts)
     </section>";
 }
 add_shortcode('vimeo_section', 'get_vimeo_section');
+
+
+# Youtube video player section short code
+function get_youtube_section ($atts)
+{
+  extract(shortcode_atts(array(
+    'id' => '',
+    'class' => 'open'
+  ), $atts));
+
+  return "
+    <section class=\"video video$id $class\">
+      <iframe src=\"http://www.youtube.com/embed/$id?modestbranding=1&autohide=1&showinfo=0&controls=0\"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen
+        frameborder=\"0\"></iframe>
+      <img src=\"" . TEMPLATE_URL . "/images/spacer@500x281.png\"
+        alt=\"\"/>
+    </section>";
+}
+add_shortcode('youtube_section', 'get_youtube_section');
