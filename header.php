@@ -53,6 +53,8 @@
         </ul>
       </nav>
     </div>
+    <a class="banner" target="_blank" href="http://fusespc.com/funding">
+      Hey! Fuse needs your help &rsaquo;</a>
   </header>
 
   <article>
