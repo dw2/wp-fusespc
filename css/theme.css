@@ -473,6 +473,19 @@ table mark.yes:before {
   background: #30c0e0;
   content: '\f00c';
 }
+
+.social{
+  float: right;
+  padding: 13px 17px;
+}
+
+.social2{
+  display: none;
+}
+.facebook img, .twitter img{
+  height: 25px;
+}
+
 @media screen and (min-width: 800px) {
   section.pricing table.narrow {
     display: none;
@@ -481,6 +494,14 @@ table mark.yes:before {
 @media screen and (max-width: 799px) {
   section.pricing table.wide {
     display: none;
+  }
+  .social{
+    display: none;
+  }
+  .social2{
+    width: 150px;
+    margin: 0 auto;
+    display: block;
   }
 }
 header {
@@ -526,28 +547,6 @@ header nav > ul > li {
 header nav > ul > li > a {
   padding: 0 0.75em;
   text-transform: uppercase;
-}
-header .banner {
-  background: #166272;
-  background: rgba(22,98,114,0.8);
-  color: #fff;
-  font-size: 0.8em;
-  left: 0;
-  letter-spacing: 0.2em;
-  line-height: 2em;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  text-transform: uppercase;
-  top: 100%;
-  -moz-transition: background 0.2s linear;
-  -o-transition: background 0.2s linear;
-  -webkit-transition: background 0.2s linear;
-  transition: background 0.2s linear;
-}
-header .banner:hover {
-  background: #207587;
 }
 @media screen and (min-width: 840px) {
   header nav {

@@ -29,7 +29,7 @@
     wp_enqueue_style('icons', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
     wp_enqueue_style('font-dosis', '//fonts.googleapis.com/css?family=Dosis:200,400,600');
     wp_enqueue_style('theme', TEMPLATE_URL . '/css/theme.css');
-    
+
     //head
     wp_head();
   ?>
@@ -41,6 +41,14 @@
       <a class="branding" href="/">
         <img src='<?= TEMPLATE_URL ?>/images/fuse-branding.png' alt='Fuse | Coworking, Tri-Cities, WA'/>
       </a>
+      <div class="social">
+        <a href="http://www.facebook.com/fusespc" class="facebook">
+          <img src="<?= TEMPLATE_URL ?>/images/facebookicon.png" alt="Fuse on Facebook">
+        </a>
+        <a href="http://www.twitter.com/fusespc" class="twitter">
+          <img src="<?= TEMPLATE_URL ?>/images/twittericon.png" alt="Fuse on Twitter">
+        </a>
+      </div>
       <nav>
         <ul>
           <?
@@ -53,8 +61,6 @@
         </ul>
       </nav>
     </div>
-    <a class="banner" target="_blank" href="http://fusespc.com/funding">
-      Hey! Fuse needs your help &rsaquo;</a>
   </header>
 
   <article>
